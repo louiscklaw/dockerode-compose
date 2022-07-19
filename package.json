@@ -4,7 +4,9 @@
   "description": "docker-compose in nodejs using dockerode",
   "main": "./compose.js",
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha -R spec --exit"
+    "test": "./node_modules/mocha/bin/mocha -R spec --exit",
+    "gitSync": "git fetch --all && git stash && git pull && git stash pop",
+    "gitUpdate": "git add . && git commit -m \"update windows,\" && yarn gitSync && git push"
   },
   "repository": {
     "type": "git",
