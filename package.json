@@ -5,8 +5,8 @@
   "main": "./compose.js",
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha -R spec --exit",
-    "gitSync": "git fetch --all && git stash && git pull && git stash pop",
-    "gitUpdate": "git add . && git commit -m \"update windows,\" && yarn gitSync && git push"
+    "gitSync": "git fetch --all && git stash && git pull && git stash pop || true",
+    "gitUpdate": "git add . && git commit -m \"update,\" && yarn gitSync && git push"
   },
   "repository": {
     "type": "git",
